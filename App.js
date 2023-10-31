@@ -1,48 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Image, TouchableOpacity} from 'react-native';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Home from './src/screens/Home/Home'
+import SignIn from './src/screens/SignIn';
+import ModeSelections from './src/screens/Modes/ModeSelections';
+import DiffSelections from './src/screens/Modes/Difficulties';
+import Leaderboard from './src/screens/Leaderboard/Leaderboard';
+import Setting from './src/screens/Setting/Setting';
+
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   return (   
     <View style={styles.container}>
-        <View style={styles.top}></View>
-      <View style={styles.screen}>
-        <Text style={styles.text}>Việt Nam</Text>
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator  screenOptions = {{headerShown: false}}>
+          
+          <Stack.Screen name="HomeScreen" component={Home} /> 
+          <Stack.Screen name = "Modes" component = {ModeSelections}/>
+          <Stack.Screen name="Difficulty" component={DiffSelections}/>
+          <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="Leaderboard" component={Leaderboard}></Stack.Screen>
+          <Stack.Screen name = "Setting" component={Setting}></Stack.Screen>
+
+        </Stack.Navigator>
+      </NavigationContainer>
       
-      <View style={styles.button}>
-        <TouchableOpacity style={styles.button1}>
-        <Image style={styles.img} source={require('./assets/FlagVietNam.png')}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button1}>
-        <Image style={styles.img} source={require('./assets/FlagLaos.png')}/>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.button}>
-        <TouchableOpacity style={styles.button1}>
-        <Image style={styles.img} source={require('./assets/FlagMy.png')}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button1}>
-        <Image style={styles.img} source={require('./assets/FlagTrungQuoc.png')}/>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.bottom}>
-        <TouchableOpacity>
-           <Image style={styles.home} source={require('./assets/home.png')}/>
-        </TouchableOpacity>
-       
-        <TouchableOpacity>
-            <Image style={styles.play} source={require('./assets/play.png')}/>
-        </TouchableOpacity>
-        
-        <TouchableOpacity>
-          <Image style={styles.settings} source={require('./assets/settings.png')}/>
-        </TouchableOpacity>
-        </View>
-
 
       <StatusBar style="auto" />
     </View>
@@ -54,33 +40,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#D6E9FF',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  top: {
-
-    width: '100%',
-    height: 300,
-    backgroundColor: '#99C2FF',
-    padding: 'auto',
-  },
-
-  screen :{
-    backgroundColor: '#FFF',
-    width: 300,
-    bottom: 150,
-    height: 250, 
-    alignItems: 'center',
-    borderRadius: 12,
-  },
-
-  flag: {
-    width: 250,
-    height: 150,
-    alignItems: 'center',
+    backgroundColor: '#fff',
+    
     justifyContent: 'center',
     top: 30
   },
@@ -146,3 +107,4 @@ const styles = StyleSheet.create({
     }
 
 });
+
