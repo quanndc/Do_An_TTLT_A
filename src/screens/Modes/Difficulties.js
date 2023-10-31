@@ -2,14 +2,16 @@ import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, Ale
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
 
-
-
-const Home = ({ navigation }) => {
+const DiffSelections = ({navigation}) => {
   return (
     <View style={design.background}>
       <View style={design.header}>
         <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }} >
-            <Image style={design.headerImage} source = {require('../../../assets/logo.png')}></Image> 
+          <Image style={design.headerImage} source={require('../../../assets/logo.png')}></Image> 
+          
+          <TouchableOpacity style = {{right: 150, bottom: 100}} onPress={()=> navigation.navigate("Modes")}>
+            <Image style={design.headerButtonImage} source={require('../../../assets/back.png')}></Image>
+          </TouchableOpacity>
         </ImageBackground>
 
       </View>
@@ -17,32 +19,16 @@ const Home = ({ navigation }) => {
       <View style={design.body}>
         <View style={design.bodyContainer}>
           <ImageBackground source={require('../../../assets/gaming.png')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }}>
-            <TouchableOpacity style={design.button1} onPress={() => navigation.navigate('Modes')}>
-              <ImageBackground source={require('../../../assets/gaming.png')} resizeMode = "cover" style={design.buttonBackImage} imageStyle={{ opacity: 0.3 }}>
-                
-              </ImageBackground>
-              <Text style={design.buttonText}>CHƠI NGAY</Text>
-              <Image source={require("../../../assets/play.png")} style={design.buttonIcon}></Image>
-              
+            <TouchableOpacity style={design.button1} onPress={() => Alert.alert("")}>             
+              <Text style={design.buttonText}>DỄ</Text>   
             </TouchableOpacity>
 
-            <TouchableOpacity style={design.button2} onPress={() => navigation.navigate('Leaderboard')}>
-              <ImageBackground source={require('../../../assets/rank.png')} resizeMode = "cover" style={design.buttonBackImage2} imageStyle={{ opacity: 0.3 }}>
-                
-              </ImageBackground>
-              <Text style={design.buttonText2}>BẢNG XẾP HẠNG</Text>
-              <Image source={require("../../../assets/competition.png")} style={design.buttonIcon2}></Image>
-              
+            <TouchableOpacity style={design.button2} onPress={() => Alert.alert("")}>
+              <Text style={design.buttonText2}>TRUNG BÌNH</Text> 
             </TouchableOpacity>
 
-
-            <TouchableOpacity style={design.button3} onPress={() => navigation.navigate('Setting')}>
-              <ImageBackground source={require('../../../assets/setting.png')} resizeMode = "cover" style={design.buttonBackImage3} imageStyle={{ opacity: 0.3 }}>
-                
-              </ImageBackground>
-              <Text style={design.buttonText}>THIẾT LẬP</Text>
-              <Image source={require("../../../assets/settings.png")} style={design.buttonIcon3}></Image>
-              
+            <TouchableOpacity style={design.button3} onPress={() => Alert.alert("")}>
+              <Text style={design.buttonText}>KHÓ</Text>
             </TouchableOpacity>
 
         </ImageBackground>
@@ -51,11 +37,19 @@ const Home = ({ navigation }) => {
       </View>
 
 
+
             <View style = {design.footer}>
-                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('SignIn')}>
+                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('HomeScreen')}>
                 <Image source={require('../../../assets/home.png')} style={design.homeImage}></Image>
                 </TouchableHighlight>
 
+                <TouchableHighlight style = {{left: 10}} onPress={() => Alert.alert("")}>
+                                    <Image source={require('../../../assets/settings.png')} style={design.settingImage}></Image>
+                </TouchableHighlight>
+
+                <TouchableHighlight style = {{left: 200}} onPress={() => navigation.navigate('Leaderboard')}>
+                                    <Image source={require("../../../assets/competition.png")} style={design.leaderboardImage}></Image>
+                </TouchableHighlight>
             </View>
 
     </View>
@@ -77,7 +71,12 @@ const design = new StyleSheet.create({
     padding: 'auto',
     
   },
+  
+  headerButtonImage: {
+    width: 22,
+    height: 22,
 
+  },
     
   //BODY
 
@@ -108,7 +107,6 @@ const design = new StyleSheet.create({
     flex: 1,
     backgroundColor: "#EAEAEA",
     alignItems: "center",
-    alignContent: "center",
     flexDirection: "row",
     padding: 'auto',
   },
@@ -117,54 +115,51 @@ const design = new StyleSheet.create({
   //BUTTON
   buttonText: {
     alignItems: 'center',
-    top: 15,
-    left: 10,
+    top: 18,
+    left: 0,
     fontSize: 16,
   },
 
   buttonText2: {
     alignItems: 'center',
     top: 15,
-    left: 20,
+    left: 0,
     fontSize: 16,
   },
 
   button1: {
     alignItems: 'center',
     backgroundColor: '#DAE9FF',
-    borderTopRightRadius: 8,
-    borderBottomRightRadius: 8,
+    borderRadius: 8,
     width: 200,
     height:80,
     padding: 10, 
-    bottom: 120,
-    right:90
+    bottom: 100,
+    right:0
   },
 
   button2: {
     alignItems: 'center',
     backgroundColor: '#DAE9FF',
-    borderTopLeftRadius: 8,
-    borderBottomLeftRadius: 8,
+    borderRadius: 8,
     width: 200,
     height:80,
     padding: 10,
     margin: 40,
-    bottom: 70,
-    left: 90
+    bottom: 50,
+    left: 0
   },
 
     
   button3: {
     alignItems: 'center',
     backgroundColor: '#DAE9FF',
-    borderTopRightRadius: 8,
-    borderBottomRightRadius: 8,
+    borderRadius: 8,
     width: 200,
     height:80,
     padding: 10, 
     bottom: 0,
-    right:90
+    right:0
   },
 
 
@@ -221,8 +216,23 @@ const design = new StyleSheet.create({
     alignSelf:'center',
 
   },
+
+  
+  settingImage: {
+    width: 40,
+    height: 40,
+    alignSelf:'center',
+
+    },
+  
+  leaderboardImage: {
+    width: 40,
+    height: 40,
+    alignSelf:'center',
+
+  },    
         
 
 })
 
-export default Home
+export default DiffSelections
