@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity} from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,7 +14,7 @@ import Setting from './src/screens/Setting/Setting';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
+  return (   
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator  screenOptions = {{headerShown: false}}>
@@ -32,7 +32,9 @@ export default function App() {
 
       <StatusBar style="auto" />
     </View>
+    
   );
+
 }
 
 const styles = StyleSheet.create({
@@ -41,6 +43,68 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     
     justifyContent: 'center',
+    top: 30
   },
+
+  text: {
+    fontSize: 40,
+    justifyContent: 'center',
+    top: 90,
+    alignSelf: 'center'
+  },
+
+    button: {
+      width: '100%',
+      bottom: 160,
+      flexDirection: 'row',
+      justifyContent: 'space-evenly'
+    },
+
+
+    img: {
+      width: 180,
+      height: 120,
+    },
+
+    button1: {
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 30,
+    
+    },
+
+ 
+    bottom: {
+      width: '100%',
+      height: '8%',
+      backgroundColor: '#EAEAEA',
+      display: 'flex',
+      position:'absolute',
+      bottom:0
+    },
+
+    home: {
+      left: 50,
+      top: 5,
+      width: 50,
+      height: 50,
+
+    },
+
+    play: {
+      width: 50,
+      height: 50,
+      bottom: 45,
+      left: 180
+    },
+
+    settings: {
+      width: 50,
+      height: 50,
+      bottom: 95,
+      left: 300
+    }
+
 });
 
