@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, Image,ImageBackground, TouchableHighlight, Alert, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { signInWithPopup, signInWithRedirect } from "firebase/auth";
-import { auth, provider } from "../../components/firebaseConfig";
+// import { signInWithPopup, signInWithRedirect } from "firebase/auth";
+// import { auth, provider } from "../../components/firebaseConfig";
 
 const SignIn = () => {
 

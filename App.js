@@ -10,6 +10,7 @@ import ModeSelections from './src/screens/Modes/ModeSelections';
 import DiffSelections from './src/screens/Modes/Difficulties';
 import Leaderboard from './src/screens/Leaderboard/Leaderboard';
 import Setting from './src/screens/Setting/Setting';
+import Navbar from './components/NavBar';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,10 +28,11 @@ export default function App() {
           <Stack.Screen name = "Setting" component={Setting}></Stack.Screen>
 
         </Stack.Navigator>
+      <Navbar/>
+
       </NavigationContainer>
       
 
-      <StatusBar style="auto" />
     </View>
     
   );

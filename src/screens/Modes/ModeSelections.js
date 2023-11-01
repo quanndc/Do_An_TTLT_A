@@ -1,68 +1,55 @@
 import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, Alert } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
+import Navbar from '../../../components/NavBar'
 
 const ModeSelect = ({ navigation }) => {
-    return (
-        <View style={design.background}>
-            <View style={design.header}>
-          <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }} >
-                    {/* <TouchableHighlight style={{ right: 150}} onPress={() => Alert.alert("")}>
+  return (
+    <View style={design.background}>
+      <View style={design.header}>
+        <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }} >
+          {/* <TouchableHighlight style={{ right: 150}} onPress={() => Alert.alert("")}>
                       <Image style={design.headerButton} source = {require('../../../assets/back.png')}></Image> 
                     </TouchableHighlight> */}
-            
-                    <Image style={design.headerImage} source = {require('../../../assets/logo.png')}></Image> 
-                </ImageBackground>
 
-            </View>
+          <Image style={design.headerImage} source={require('../../../assets/logo.png')}></Image>
+        </ImageBackground>
+
+      </View>
 
       <View style={design.body}>
         <View style={design.bodyContainer}>
           <ImageBackground source={require('../../../assets/gaming.png')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }}>
             <TouchableOpacity style={design.button1} onPress={() => navigation.navigate('Difficulty')}>
-                <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.buttonBackImage} imageStyle={{ opacity: 0.1 }} >
-                <Text style = {{fontWeight: 'bold'}}>NHÌN CỜ ĐOÁN QUỐC GIA</Text>
+              <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.buttonBackImage} imageStyle={{ opacity: 0.1 }} >
+                <Text style={{ fontWeight: 'bold' }}>NHÌN CỜ ĐOÁN QUỐC GIA</Text>
                 <Text style={{ fontSize: 11 }}>20 CÂU HỎI</Text>
-                </ImageBackground>                
+              </ImageBackground>
 
-              
+
             </TouchableOpacity>
 
             <TouchableOpacity style={design.button2} onPress={() => navigation.navigate('Difficulty')}>
-                <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.buttonBackImage} imageStyle={{ opacity: 0.1 }} >
-                <Text style = {{fontWeight: 'bold'}}>NHÌN TÊN ĐOÁN QUỐC GIA</Text>
+              <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.buttonBackImage} imageStyle={{ opacity: 0.1 }} >
+                <Text style={{ fontWeight: 'bold' }}>NHÌN TÊN ĐOÁN QUỐC GIA</Text>
                 <Text style={{ fontSize: 11 }}>20 CÂU HỎI</Text>
-                </ImageBackground>                
-
-              
-            </TouchableOpacity>                        
+              </ImageBackground>
 
 
+            </TouchableOpacity>
 
 
-        </ImageBackground>
+
+
+          </ImageBackground>
 
         </View>
-      </View>            
+      </View>
+    </View>
 
-            <View style = {design.footer}>
-                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('HomeScreen')}>
-                <Image source={require('../../../assets/home.png')} style={design.homeImage}></Image>
-                </TouchableHighlight>
 
-                <TouchableHighlight style = {{left: 10}} onPress={() => Alert.alert("")}>
-                                    <Image source={require('../../../assets/settings.png')} style={design.settingImage}></Image>
-                </TouchableHighlight>
 
-                <TouchableHighlight style = {{left: 200}} onPress={() => navigation.navigate('Leaderboard')}>
-                                    <Image source={require("../../../assets/competition.png")} style={design.leaderboardImage}></Image>
-                </TouchableHighlight>
-            </View>
-        </View>
-
-        
-
-    )
+  )
 }
 
 const design = new StyleSheet.create({
@@ -77,7 +64,7 @@ const design = new StyleSheet.create({
     backgroundColor: "#B4D2FF",
     flex: 2,
     padding: 'auto',
-    
+
   },
 
   headerButton: {
@@ -86,10 +73,10 @@ const design = new StyleSheet.create({
 
   },
 
-    
+
   //BODY
 
-  body:{
+  body: {
     flex: 6,
     backgroundColor: "#FFF",
 
@@ -141,8 +128,8 @@ const design = new StyleSheet.create({
     backgroundColor: '#DAE9FF',
     borderRadius: 8,
     width: 300,
-    height:200,
-    padding: 10, 
+    height: 200,
+    padding: 10,
     bottom: 50,
 
   },
@@ -150,16 +137,16 @@ const design = new StyleSheet.create({
   button2: {
     alignItems: 'center',
     backgroundColor: '#DAE9FF',
-      borderRadius: 8,
+    borderRadius: 8,
     width: 300,
-    height:200,
+    height: 200,
     padding: 10,
     margin: 40,
     top: 40,
 
   },
 
-    
+
 
 
 
@@ -169,7 +156,7 @@ const design = new StyleSheet.create({
     alignItems: "center",
     width: 300,
     height: 190
-    
+
   },
 
 
@@ -178,23 +165,23 @@ const design = new StyleSheet.create({
   homeImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
-    },
-  
+  },
+
   settingImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
-    },
-  
+  },
+
   leaderboardImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
-  },  
+  },
 
 })
 
