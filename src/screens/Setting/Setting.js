@@ -5,7 +5,6 @@ import { TouchableOpacity } from 'react-native'
 
 
 const Setting = ({ navigation }) => {
-  
 
 
 
@@ -13,55 +12,40 @@ const Setting = ({ navigation }) => {
 
 
 
-    return (
-        <View style={design.background}>
-            <View style={design.header}>
-                <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }} >
 
-                </ImageBackground>
-            </View>
+  return (
+    <View style={design.background}>
+      <View style={design.header}>
+        <ImageBackground source={require('../../../assets/flags.jpg')} resizeMode="cover" style={design.bodyImage} imageStyle={{ opacity: 0.1 }} >
 
-            <View style={design.body}>
-                <View style={design.bodyContainer}>
-                    <Text style={{ alignItems: 'center', top: 150, left: 80, fontWeight: 'bold' }}>ÂM THANH</Text>
-            
-                    <View style={design.volumeButton}>
-                        <TouchableHighlight  style = {{height: 80, width: 75}} onPress={() => console.log("Pressed")}>
-                        <Image  style={design.volumeImage}  source={require('../../../assets/volume.png')}></Image>
-                      </TouchableHighlight>  
-              
-                      <TouchableHighlight  style = {{height: 80, width: 75, left: 75, bottom: 80}} onPress={() => console.log("Pressed")}>
-                        <Image  style={design.volumeImage}  source={require('../../../assets/silent.png')}></Image>
-                      </TouchableHighlight> 
-              
-                    </View>
+        </ImageBackground>
+      </View>
 
-                </View>
-            </View>
-            
+      <View style={design.body}>
+        <View style={design.bodyContainer}>
+          <Text style={{ alignItems: 'center', top: 150, left: 80, fontWeight: 'bold' }}>ÂM THANH</Text>
 
+          <View style={design.volumeButton}>
+            <TouchableHighlight style={{ height: 80, width: 75 }} onPress={() => console.log("Pressed")}>
+              <Image style={design.volumeImage} source={require('../../../assets/volume.png')}></Image>
+            </TouchableHighlight>
 
+            <TouchableHighlight style={{ height: 80, width: 75, left: 75, bottom: 80 }} onPress={() => console.log("Pressed")}>
+              <Image style={design.volumeImage} source={require('../../../assets/silent.png')}></Image>
+            </TouchableHighlight>
 
+          </View>
 
-
-
-            <View style = {design.footer}>
-                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('HomeScreen')}>
-                <Image source={require('../../../assets/home.png')} style={design.homeImage}></Image>
-                </TouchableHighlight>
-
-                <TouchableHighlight style = {{left: 10}} onPress={() => Alert.alert("")}>
-                                    <Image source={require('../../../assets/settings.png')} style={design.settingImage}></Image>
-                </TouchableHighlight>
-
-                <TouchableHighlight style = {{left: 200}} onPress={() => navigation.navigate('Leaderboard')}>
-                                    <Image source={require("../../../assets/competition.png")} style={design.leaderboardImage}></Image>
-                </TouchableHighlight>
-            </View>
-            
         </View>
-        
-    )
+      </View>
+
+
+
+
+
+    </View>
+
+  )
 }
 
 const design = new StyleSheet.create({
@@ -76,13 +60,13 @@ const design = new StyleSheet.create({
     backgroundColor: "#B4D2FF",
     flex: 2,
     padding: 'auto',
-    
+
   },
 
-    
+
   //BODY
 
-  body:{
+  body: {
     flex: 6,
     backgroundColor: "#FFF",
 
@@ -134,10 +118,10 @@ const design = new StyleSheet.create({
     backgroundColor: '#DAE9FF',
     borderRadius: 8,
     width: 200,
-    height:80,
-    padding: 10, 
+    height: 80,
+    padding: 10,
     bottom: 100,
-    right:0
+    right: 0
   },
 
   button2: {
@@ -145,45 +129,45 @@ const design = new StyleSheet.create({
     backgroundColor: '#DAE9FF',
     borderRadius: 8,
     width: 200,
-    height:80,
+    height: 80,
     padding: 10,
     margin: 40,
     bottom: 50,
     left: 0
   },
 
-    
+
   button3: {
     alignItems: 'center',
     backgroundColor: '#DAE9FF',
     borderRadius: 8,
     width: 200,
-    height:80,
-    padding: 10, 
+    height: 80,
+    padding: 10,
     bottom: 0,
-    right:0
+    right: 0
   },
 
 
   buttonBackImage: {
-      flex: 2,
-      width: 200,
-      height: 70
-    
+    flex: 2,
+    width: 200,
+    height: 70
+
   },
 
   buttonBackImage2: {
-      flex: 2,
-      width: 200,
-      height: 70,
-      
+    flex: 2,
+    width: 200,
+    height: 70,
+
   },
 
   buttonBackImage3: {
-      flex: 2,
-      width: 200,
-      height: 70
-    
+    flex: 2,
+    width: 200,
+    height: 70
+
   },
 
   buttonIcon: {
@@ -193,7 +177,7 @@ const design = new StyleSheet.create({
     bottom: 10,
     left: 10,
   },
-  
+
   buttonIcon2: {
     width: 30,
     height: 30,
@@ -201,40 +185,40 @@ const design = new StyleSheet.create({
     bottom: 13,
     left: 10,
   },
-    
+
   buttonIcon3: {
     width: 30,
     height: 30,
     alignSelf: 'flex-start',
     bottom: 10,
     left: 10,
-    },
+  },
 
 
   //NAV
   homeImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
   },
 
-  
+
   settingImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
-    },
-  
+  },
+
   leaderboardImage: {
     width: 40,
     height: 40,
-    alignSelf:'center',
+    alignSelf: 'center',
 
-  },    
-     
-  
+  },
+
+
   volumeImage: {
     width: 40,
     height: 40,

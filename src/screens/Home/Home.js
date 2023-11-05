@@ -51,12 +51,9 @@ const Home = ({ navigation }) => {
       </View>
 
 
-            <View style = {design.footer}>
-                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('SignIn')}>
-                <Image source={require('../../../assets/home.png')} style={design.homeImage}></Image>
-                </TouchableHighlight>
+            {/* <View style = {design.footer}>
 
-            </View>
+            </View> */}
 
     </View>
   )

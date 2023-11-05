@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, Alert, FlatList } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
+import Navbar from '../../../components/NavBar'
 
 const Leaderboard = ({navigation}) => {
     return (
@@ -34,20 +35,10 @@ const Leaderboard = ({navigation}) => {
 
                 </View>
             </View>
-
+{/* 
             <View style = {design.footer}>
-                <TouchableHighlight style = {{left: 160}} onPress={() => navigation.navigate('HomeScreen')}>
-                <Image source={require('../../../assets/home.png')} style={design.homeImage}></Image>
-                </TouchableHighlight>
-
-                <TouchableHighlight style = {{left: 10}} onPress={() => Alert.alert("")}>
-                                    <Image source={require('../../../assets/settings.png')} style={design.settingImage}></Image>
-                </TouchableHighlight>
-
-                <TouchableHighlight style = {{left: 200}} onPress={() => navigation.navigate('Leaderboard')}>
-                                    <Image source={require("../../../assets/competition.png")} style={design.leaderboardImage}></Image>
-                </TouchableHighlight>
-            </View>
+              <Navbar/>
+            </View> */}
 
 
         </View>
