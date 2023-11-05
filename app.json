@@ -15,13 +15,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "googleServiceFile": "./google-services.json",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.FlagsGame"
     },
+    "plugins": [
+      "@react-native-google-signin/google-signin"
+    ],
     "android": {
+      "googleServiceFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.FlagsGame"
     },
     "web": {
       "favicon": "./assets/favicon.png"

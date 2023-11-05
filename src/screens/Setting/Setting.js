@@ -2,17 +2,10 @@ import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, Ale
 import { useState } from 'react'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
+import CountryFlag from "react-native-country-flag";
 
 
 const Setting = ({ navigation }) => {
-
-
-
-
-
-
-
-
   return (
     <View style={design.background}>
       <View style={design.header}>
@@ -22,7 +15,14 @@ const Setting = ({ navigation }) => {
       </View>
 
       <View style={design.body}>
-        <View style={design.bodyContainer}>
+        <Image
+          style={design.img}
+          source={{
+            uri: "https://flagsapi.com/VN/flat/64.png",
+          }}
+
+        />
+        {/* <View style={design.bodyContainer}>
           <Text style={{ alignItems: 'center', top: 150, left: 80, fontWeight: 'bold' }}>ÂM THANH</Text>
 
           <View style={design.volumeButton}>
@@ -36,7 +36,7 @@ const Setting = ({ navigation }) => {
 
           </View>
 
-        </View>
+        </View> */}
       </View>
 
 
@@ -49,6 +49,12 @@ const Setting = ({ navigation }) => {
 }
 
 const design = new StyleSheet.create({
+  img: {
+    width: 200,
+    height: 200
+  },
+
+
   background: {
     backgroundColor: '#fff',
     flex: 1,

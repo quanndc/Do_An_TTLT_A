@@ -11,29 +11,31 @@ import DiffSelections from './src/screens/Modes/Difficulties';
 import Leaderboard from './src/screens/Leaderboard/Leaderboard';
 import Setting from './src/screens/Setting/Setting';
 import Navbar from './components/NavBar';
-
+import Quiz from './src/screens/Quiz/Quiz';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (   
-    <View style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator  screenOptions = {{headerShown: false}}>
+
+    <Quiz/>
+    // <View style={styles.container}>
+    //   <NavigationContainer>
+    //     <Stack.Navigator  screenOptions = {{headerShown: false}}>
           
-          <Stack.Screen name="HomeScreen" component={Home} /> 
-          <Stack.Screen name = "Modes" component = {ModeSelections}/>
-          <Stack.Screen name="Difficulty" component={DiffSelections}/>
-          <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="Leaderboard" component={Leaderboard}></Stack.Screen>
-          <Stack.Screen name = "Setting" component={Setting}></Stack.Screen>
+    //       <Stack.Screen name="HomeScreen" component={Home} /> 
+    //       <Stack.Screen name = "Modes" component = {ModeSelections}/>
+    //       <Stack.Screen name="Difficulty" component={DiffSelections}/>
+    //       <Stack.Screen name="SignIn" component={SignIn} />
+    //       <Stack.Screen name="Leaderboard" component={Leaderboard}></Stack.Screen>
+    //       <Stack.Screen name = "Setting" component={Setting}></Stack.Screen>
 
-        </Stack.Navigator>
-      <Navbar/>
+    //     </Stack.Navigator>
+    //   <Navbar/>
 
-      </NavigationContainer>
+    //   </NavigationContainer>
       
 
-    </View>
+    // </View>
     
   );
 

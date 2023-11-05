@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
+    "@react-native-firebase/app": "^18.6.1",
+    "@react-native-google-signin/google-signin": "^10.1.0",
     "@react-navigation/native-stack": "^6.9.16",
     "expo": "^49.0.16",
     "expo-status-bar": "~1.6.0",
@@ -17,6 +19,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
+    "react-native-country-flag": "^2.0.2",
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
