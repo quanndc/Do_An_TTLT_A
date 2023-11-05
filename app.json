@@ -16,8 +16,7 @@
     ],
     "ios": {
       "googleServiceFile": "./google-services.json",
-      "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.FlagsGame"
+      "supportsTablet": true
     },
     "plugins": [
       "@react-native-google-signin/google-signin"
@@ -27,8 +26,7 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.anonymous.FlagsGame"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
