@@ -16,6 +16,12 @@
     ],
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.anonymous.FlagsGame"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.FlagsGame"
     }
   }
 }
